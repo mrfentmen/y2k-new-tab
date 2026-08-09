@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Courier+Prime&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Courier Prime', monospace;
+  background: radial-gradient(circle at top, #ffccff 0%, #ccffcc 25%, #ffffcc 50%, #ccffff 75%, #ffccff 100%);
+  min-height: 100vh;
+  overflow: hidden;
+  color: #330033;
+  position: relative;
+}
+
+.bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="50" height="50" fill="%23ffccff"/><rect x="50" y="50" width="50" height="50" fill="%23ccffcc"/></svg>');
+  opacity: 0.3;
+  animation: pulse 10s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.3; }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.clock-wrapper {
+  text-align: center;
+  margin: 60px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px dashed #ff69b4;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ffb6c1;
+}
+
+.glitter-text {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 4rem;
+  color: #ff69b4;
+  text-shadow:
+    2px 2px 0 #ff1493,
+    -2px -2px 0 #ff69b4,
+    0 0 10px #fff,
+    0 0 20px #ff69b4;
+  letter-spacing: 8px;
+  animation: glitter 2s infinite;
+}
+
+@keyframes glitter {
+  0%, 100% { text-shadow: 2px 2px 0 #ff1493, -2px -2px 0 #ff69b4, 0 0 10px #fff, 0 0 20px #ff69b4; }
+  25% { text-shadow: 2px 2px 0 #ff1493, -2px -2px 0 #ff69b4, 0 0 15px #fff, 0 0 25px #ff69b4, 3px -3px 0 #ffb6c1; }
+  50% { text-shadow: 2px 2px 0 #ff1493, -2px -2px 0 #ff69b4, 0 0 25px #fff, 0 0 30px #ff69b4, 3px -3px 0 #ffb6c1, -3px 3px 0 #ff69b4; }
+  75% { text-shadow: 2px 2px 0 #ff1493, -2px -2px 0 #ff69b4, 0 0 20px #fff, 0 0 25px #ff69b4, 3px -3px 0 #ffb6c1, -3px 3px 0 #ff69b4; }
+}
+
+.stars {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-top: 10px;
+}
+
+.y2k-text {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.5rem;
+  color: #330033;
+  margin-top: 15px;
+  letter-spacing: 5px;
+}
+
+.date-wrapper {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #330033;
+  background: rgba(255, 255, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.fact-wrapper {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #00ff7f;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 0 15px #00ff7f;
+}
+
+.y2k-fact {
+  font-family: 'Courier Prime', monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #330033;
+  text-align: center;
+}
+
+.guestbook {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px dashed #ff69b4;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 0 20px rgba(255, 105, 175, 0.3);
+}
+
+.guestbook h3 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.8rem;
+  color: #ff69b4;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#guestbook-entries {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.guestbook-entry {
+  background: rgba(255, 255, 255, 0.7);
+  border-left: 3px solid #ffb6c1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.guestbook-entry strong { color: #ff69b4; }
+
+.guestbook form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.guestbook input,
+.guestbook textarea {
+  padding: 8px;
+  border: 1px solid #ff69b4;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  font-family: inherit;
+}
+
+.guestbook button {
+  background: linear-gradient(45deg, #ff69b4, #ffb6c1);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Courier Prime', monospace;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.guestbook button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 105, 175, 0.5);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  color: #330033;
+}
+
+.rating {
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin-bottom: 5px;
+}
+
+.y2k-copy {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.ad-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 2px dashed #ccc;
+  padding: 8px 15px;
+  text-align: center;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+.ad-label {
+  color: #999;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.ad-content {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.ad-content:hover {
+  text-decoration: underline;
+}
