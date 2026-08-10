@@ -1,0 +1,19 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1280px; height: 800px; overflow: hidden; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; position: relative; }
+.bg { position: absolute; inset: 0; background: linear-gradient(155deg, rgb(147,150,159) 0%, rgb(133,230,245) 100%); }
+.glow { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.55; }
+.g1 { width: 520px; height: 520px; left: -140px; top: -160px; background: rgba(255,255,255,0.35); }
+.g2 { width: 640px; height: 640px; right: -220px; bottom: -260px; background: rgba(15,23,42,0.35); }
+.header { position: absolute; top: 52px; left: 0; right: 0; text-align: center; z-index: 5; }
+.name { font-size: 38px; font-weight: 800; color: #fff; letter-spacing: 0.2px; text-shadow: 0 3px 18px rgba(0,0,0,0.35); }
+.tag { font-size: 17px; color: rgba(255,255,255,0.88); margin-top: 10px; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.25); }
+.frame { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 6; }
+.win { background: #fff; border-radius: 16px; box-shadow: 0 30px 70px rgba(0,0,0,0.38); overflow: hidden; }
+.winbar { height: 46px; background: #f3f4f6; display: flex; align-items: center; padding: 0 16px; gap: 8px; border-bottom: 1px solid #e2e5ea; }
+.dot { width: 13px; height: 13px; border-radius: 50%; flex: none; }
+.d1 { background: #ff5f57; } .d2 { background: #febc2e; } .d3 { background: #28c840; }
+.wintitle { margin-left: 10px; font-size: 14px; font-weight: 600; color: #4b5563; }
+.winicon { margin-left: auto; width: 22px; height: 22px; border-radius: 5px; }
+.winbody { background: #fff; }
+iframe { display: block; border: 0; background: #fff; }
