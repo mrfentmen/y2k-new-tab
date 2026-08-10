@@ -1,16 +1,17 @@
 # Y2K New Tab
 
-A nostalgically aesthetic Y2K-themed new tab page. Features a glittery clock, star ratings, guestbook, and customizable backgrounds. Free with Y2K aesthetic - ad-supported with optional premium.
+A nostalgic Y2K styled start page for your new tab. Big glittery clock, rotating early internet facts, and a guestbook you can sign.
 
-## Monetization
+## Install
 
-- Free: Y2K-themed new tab with clock, guestbook, 5 background options
-- Premium ($2.99/mo): 50+ backgrounds, custom fonts, music player, no ads
+1. Open chrome://extensions
+2. Enable Developer mode
+3. Click Load unpacked and choose the `ext` folder
 
-## Features
+## Store assets
 
-- Glittery Y2K clock with star ratings
-- Guestbook for visitors
-- Rotating Y2K backgrounds
-- Customizable clock format
-- Quick links to Y2K websites
+Icons live in `ext/icons` (16, 32, 48, 128). The 1280x800 screenshot and the humanized store description live in `ext/store`.
+
+## Privacy
+
+Everything stays on your device. The guestbook is stored locally with the storage permission only.
