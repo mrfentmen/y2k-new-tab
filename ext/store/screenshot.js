@@ -1,8 +1,6 @@
 (function () {
   var f = document.getElementById('pv');
-  var wb = document.getElementById('winbody');
-  var icon = document.getElementById('winicon');
-  var base = 'icons/icon16.png';
+  var box = document.getElementById('box');
   function done() {
     window.__storeReady = true;
     window.dispatchEvent(new Event('store-ready'));
@@ -16,13 +14,12 @@
         h = Math.max(doc.body.scrollHeight, doc.documentElement ? doc.documentElement.scrollHeight : 0, 180);
       }
     } catch (e) {}
-    var scale = Math.min(800 / w, 560 / h, 1.6);
+    var scale = Math.min(430 / w, 590 / h, 1.25);
     f.width = w; f.height = h;
-    wb.style.width = Math.round(w * scale) + 'px';
-    wb.style.height = Math.round(h * scale) + 'px';
+    box.style.width = Math.round(w * scale) + 'px';
+    box.style.height = Math.round(h * scale) + 'px';
     f.style.transform = 'scale(' + scale + ')';
     f.style.transformOrigin = 'top left';
-    if (icon && base) { icon.style.backgroundImage = 'url(' + base + ')'; icon.style.backgroundSize = 'cover'; }
     done();
   }
   window.addEventListener('load', function () {
