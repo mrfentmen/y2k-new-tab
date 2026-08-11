@@ -255,3 +255,13 @@ body {
   flex: 1 1 auto; min-width: 0; font-size: 9px; color: #9a9aa4;
   text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+
+.support-foot .report, .support .report {
+  display: inline-flex; align-items: center; gap: 4px;
+  flex: 0 0 auto; font-size: 11px; font-weight: 600;
+  color: inherit; opacity: .82; text-decoration: none;
+  border: 1px solid currentColor; border-radius: 6px;
+  padding: 4px 9px; transition: transform .15s ease, opacity .15s ease;
+}
+.support-foot .report:hover, .support .report:hover { opacity: 1; transform: translateY(-1px); }
+.support-foot .report:focus-visible, .support .report:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
