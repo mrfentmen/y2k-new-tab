@@ -216,3 +216,42 @@ body {
 .ad-content:hover {
   text-decoration: underline;
 }
+/* ---- top ad space (reserved, non-interactive) ---- */
+.top-ad {
+  position: fixed; top: 8px; left: 50%; transform: translateX(-50%);
+  z-index: 2000;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  border: 1px dashed rgba(255, 255, 255, 0.18); border-radius: 8px;
+  background: rgba(0, 0, 0, 0.28);
+  padding: 6px 10px; 
+  user-select: none; cursor: default;
+}
+.top-ad .ad-tag {
+  font-size: 9px; font-weight: 800; letter-spacing: 0.8px;
+  color: #b8b8c2; border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 4px;
+  padding: 2px 5px; text-transform: uppercase;
+}
+.top-ad .ad-text { font-size: 11px; font-weight: 600; color: #b0b0ba; }
+
+/* ---- support footer ---- */
+.support-foot {
+  position: fixed; bottom: 8px; left: 50%; transform: translateX(-50%);
+  z-index: 2000; width: min(520px, 92vw); background: rgba(0,0,0,0.35); backdrop-filter: blur(2px); border-radius: 8px;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 8px 10px; 
+  border-top: 1px dashed rgba(255, 255, 255, 0.16);
+}
+.support-foot .coffee {
+  display: inline-flex; align-items: center; gap: 5px;
+  flex: 0 0 auto; font-size: 11px; font-weight: 700;
+  color: #ffd977; text-decoration: none;
+  border: 1px solid rgba(255, 217, 119, 0.35); border-radius: 6px;
+  background: rgba(255, 217, 119, 0.08); padding: 4px 9px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.support-foot .coffee:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(255, 217, 119, 0.22); }
+.support-foot .coffee:focus-visible { outline: 2px solid rgba(255,255,255,0.5); outline-offset: 2px; }
+.support-foot .ad-slot {
+  flex: 1 1 auto; min-width: 0; font-size: 9px; color: #9a9aa4;
+  text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
